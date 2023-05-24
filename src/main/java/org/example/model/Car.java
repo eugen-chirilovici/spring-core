@@ -6,8 +6,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Car {
 
-    @Autowired
     private Engineer engineer;
+
+    @Autowired
+    public Car(Engineer engineer) {
+        this.engineer = engineer;
+    }
 
     public Engineer getEngineer() {
         return engineer;
