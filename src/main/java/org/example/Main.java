@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.example.conf.ConfigClass;
+import org.example.model.Broker;
 import org.example.model.Car;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,9 +13,10 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(ConfigClass.class);
 
-        Car carBean = context.getBean(Car.class);
+        Broker myBroker = context.getBean(Broker.class);
 
-        System.out.println(carBean.getEngineer().getName());
+        System.out.println(myBroker.getEngineerAndBrokerResponsible());
+
     }
 
 }
