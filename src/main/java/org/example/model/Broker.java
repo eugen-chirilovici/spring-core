@@ -11,9 +11,12 @@ public class Broker {
 
     private String brokerName = "Edward";
 
-    public String getEngineerAndBrokerResponsible() {
-        return "Broker name: " + brokerName + "\n" +
-                "Engineer name: " + car.getEngineer().getName();
+    @Override
+    public String toString() {
+        return "Broker{" +
+                "car=" + car +
+                ", brokerName='" + brokerName + '\'' +
+                '}';
     }
 
 }

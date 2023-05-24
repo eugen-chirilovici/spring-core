@@ -1,5 +1,8 @@
 package org.example.model;
 
+import org.springframework.stereotype.Component;
+
+@Component("BMW")
 public class BMW implements Car {
 
     private Engineer engineer;
@@ -11,5 +14,12 @@ public class BMW implements Car {
     @Override
     public Engineer getEngineer() {
         return engineer;
+    }
+
+    @Override
+    public String toString() {
+        return "BMW{" +
+                "engineer=" + engineer +
+                '}';
     }
 }

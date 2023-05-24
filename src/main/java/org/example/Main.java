@@ -14,7 +14,7 @@ public class Main {
 
         Broker myBroker = context.getBean(Broker.class);
 
-        System.out.println(myBroker.getEngineerAndBrokerResponsible());
+        System.out.println(myBroker);
 
     }
 
