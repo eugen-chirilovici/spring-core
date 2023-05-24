@@ -1,6 +1,8 @@
 package org.example.conf;
 
 
+import org.example.model.Audi;
+import org.example.model.BMW;
 import org.example.model.Broker;
 import org.example.model.Car;
 import org.example.model.Engineer;
@@ -12,25 +14,24 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(value = "org.example.model")
 public class ConfigClass {
-
     @Bean
-    @Qualifier("bmw")
-    public Car getCar() {
+    @Qualifier("Audi")
+    public Car getAudi() {
         Engineer engineer = new Engineer();
-        engineer.setName("Ion");
-        return new Car(engineer);
+        engineer.setName("Iwan");
+        return new Audi(engineer);
     }
 
     @Bean
-    @Qualifier("audi")
-    public Car getCar2() {
-        return new Car(getEngineer());
+    @Qualifier("BMW")
+    public Car getBMW() {
+        return new BMW(getEngineer());
     }
 
     @Bean
     public Engineer getEngineer() {
         Engineer engineer = new Engineer();
-        engineer.setName("Iwan");
+        engineer.setName("Ion");
         return engineer;
     }
 
