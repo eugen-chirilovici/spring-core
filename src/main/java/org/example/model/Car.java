@@ -9,7 +9,7 @@ public class Car {
     private Engineer engineer;
 
     @Autowired
-    public Car(Engineer engineer) {
+    public void setEngineer(Engineer engineer) {
         this.engineer = engineer;
     }
 
