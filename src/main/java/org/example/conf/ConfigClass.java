@@ -1,21 +1,10 @@
 package org.example.conf;
 
 
-import org.example.model.Car;
-import org.example.model.Engineer;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(value = "org.example.model")
 public class ConfigClass {
-
-    @Bean
-    Car getCar() {
-        return new Car(getEngineer());
-    }
-
-    @Bean
-    Engineer getEngineer() {
-        return new Engineer();
-    }
 }
