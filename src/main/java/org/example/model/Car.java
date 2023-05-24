@@ -5,7 +5,7 @@ public class Car {
 
     private Engineer engineer;
 
-    public void setEngineer(Engineer engineer) {
+    public Car(Engineer engineer) {
         this.engineer = engineer;
     }
 
